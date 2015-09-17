@@ -1,32 +1,6 @@
 /*global $, angular */
 var prods = [], pname, name_value, pprice, price_value, pavail, avail_value, total_value, tot = 0, total_price = 0;
     
-/*function start() {
-    "use strict";
-    var num = 0, new_div, new_image;
-    $("#add").bind("click", function () {
-        var product_name = name_value.text(), n = 0;
-        while (n < 10) {
-            if (prods[n].name === product_name) {
-                prods[n].addCart(n);
-                break;
-            }
-            n = n + 1;
-        }
-    });
-    
-    $("#cancel").bind("click", function () {
-        var product_name = name_value.text(), n = 0;
-        while (n < 10) {
-            if (prods[n].name === product_name) {
-                prods[n].removeCart(n);
-                break;
-            }
-            n = n + 1;
-        }
-    });
-} */
-    
 $(document).ready(function () {
     "use strict";
     $(".row").mouseenter(function () {
@@ -48,7 +22,7 @@ app.controller("cartController", ["$scope", function ($scope) {
     $scope.productPrice;
     $scope.productAvail;
     $scope.idValue;
-    $scope.totalPrice = 0;
+    $scope.totalPrice;
     $scope.prods = [
         {name : "Shirts", price : 100, availability : 10, path : "../shopping cart/assets/0.jpg"},
         {name : "Accessories", price : 50, availability : 7, path : "../shopping cart/assets/1.jpg"},
@@ -61,23 +35,19 @@ app.controller("cartController", ["$scope", function ($scope) {
         {name : "Bags", price : 150, availability : 6, path : "../shopping cart/assets/8.jpg"}
     ];
     
-   /* $scope.removeCart = function (n) {
+   $scope.removeCart = function () {
         "use strict";
-        this.availability = this.availability + 1;
-        tot = tot - this.price;
-        total_value.text("Total price" + tot);
-        display(n);
-        total_value.text("Total price" + tot);
+        $scope.prods[$scope.idValue].availability += 1;
+        $scope.productAvail = $scope.prods[$scope.idValue].availability;
+        $scope.totalPrice -= $scope.prods[$scope.idValue].price;
     };
 
-    $scope.addCart = function (n) {
+    $scope.addCart = function () {
         "use strict";
-        this.availability = this.availability - 1;
-        tot = tot + this.price;
-        total_value.text("Total price" + tot);
-        display(n);
-        total_value.text("Total price" + tot);
-    }; */
+        $scope.prods[$scope.idValue].availability -= 1;
+        $scope.productAvail = $scope.prods[$scope.idValue].availability;
+        $scope.totalPrice += $scope.prods[$scope.idValue].price; 
+    }; 
     
     $scope.display = function($event) { 
         $scope.idValue = $event.target.id;

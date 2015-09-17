@@ -57,12 +57,12 @@
                 <span>Product name:  </span><span>{{productName}}</span> <br>
                 <span>Product price:  </span><span>{{productPrice}}</span> <br>
                 <span>Product availability:  </span><span>{{productAvail}}</span> <br>
-                <span>Total price: </span>
+                <span>Total price: </span><span>{{totalPrice}}</span> <br>
             </div>
         </div>
         <div class="row">
-            <input type="button" class="btn btn-primary" id="add" value="Add">
-        <input type="button" class="btn btn-primary" id="cancel" value="Cancel">
+            <input type="button" class="btn btn-primary" id="add" value="Add" ng-click="addCart()">
+            <input type="button" class="btn btn-primary" id="cancel" value="Cancel" ng-click="removeCart()">
         </div>
 
         <footer>
