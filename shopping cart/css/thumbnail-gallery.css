@@ -22,12 +22,13 @@ footer {
 
 #disp {
     font-size: 20px;
-    color: #120303;
+    color: #840000;
 }
 
 .show {
+    float: right;
     font-size: 20px;
-    color: #120303;
+    color: #840000;
 }
 
 .imgs {
