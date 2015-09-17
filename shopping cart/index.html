@@ -48,12 +48,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-10 col-md-8 col-sm-8 col-xs-10"> 
+            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-10"> 
                 <div class="thumb" class="col-lg-6 col-sm-4 col-md-4 col-xs-6" ng-repeat="product in prods">
                     <img id={{$index}} class="img-responsive imgs" alt="image" width="100" height="100" ng-src="{{product.path}}" ng-click="display($event)">
                 </div>
             </div>
-            <div id="disp" class="col-lg-2 col-sm-4 col-md-4 col-xs-2">
+            <div id="disp" class="col-lg-3 col-sm-4 col-md-4 col-xs-2">
                 <span>Product name:  </span><span>{{productName}}</span> <br>
                 <span>Product price:  </span><span>{{productPrice}}</span> <br>
                 <span>Product availability:  </span><span>{{productAvail}}</span> <br>
@@ -62,10 +62,15 @@
             </div>
         </div>
         <div class="row">
-            <input type="button" class="btn btn-primary" id="add" value="Add" ng-click="addCart()">
-            <input type="button" class="btn btn-primary" id="cancel" value="Cancel" ng-click="removeCart()">
+            <input type="button" class="btn btn-danger" id="add" value="Add" ng-click="addCart()">
+            <input type="button" class="btn btn-danger" id="cancel" value="Cancel" ng-click="removeCart()">
         </div>
-
+        <br>
+        <div class="row show">
+            <span>Products Selected</span> <br>
+            <span>Product name:  </span><span>{{productName}}</span> <br>
+            <span>Number of products:  </span><span>{{productCount}}</span> <br>
+        </div>
         <footer>
             <div class="row">
                 <div class="col-lg-12">
