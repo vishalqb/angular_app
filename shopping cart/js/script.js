@@ -21,8 +21,9 @@ app.controller("cartController", ["$scope", function ($scope) {
     $scope.productName = "";
     $scope.productPrice;
     $scope.productAvail;
-    $scope.idValue;
-    $scope.totalPrice;
+    $scope.idValue = 0;
+    $scope.totalPrice = 0;
+    $scope.status = "";
     $scope.prods = [
         {name : "Shirts", price : 100, availability : 10, path : "../shopping cart/assets/0.jpg"},
         {name : "Accessories", price : 50, availability : 7, path : "../shopping cart/assets/1.jpg"},
@@ -35,24 +36,33 @@ app.controller("cartController", ["$scope", function ($scope) {
         {name : "Bags", price : 150, availability : 6, path : "../shopping cart/assets/8.jpg"}
     ];
     
-   $scope.removeCart = function () {
-        "use strict";
-        $scope.prods[$scope.idValue].availability += 1;
-        $scope.productAvail = $scope.prods[$scope.idValue].availability;
-        $scope.totalPrice -= $scope.prods[$scope.idValue].price;
+    $scope.removeCart = function () {
+        if($scope.totalPrice <= 0) {
+            $scope.totalPrice = 0;
+            $scope.status = "No products selected";
+        } else { 
+            $scope.status = "";
+            $scope.prods[$scope.idValue].availability += 1;
+            $scope.productAvail = $scope.prods[$scope.idValue].availability;
+            $scope.totalPrice -= $scope.prods[$scope.idValue].price;
+        }
     };
 
     $scope.addCart = function () {
-        "use strict";
-        $scope.prods[$scope.idValue].availability -= 1;
-        $scope.productAvail = $scope.prods[$scope.idValue].availability;
-        $scope.totalPrice += $scope.prods[$scope.idValue].price; 
-    }; 
+        if($scope.prods[$scope.idValue].availability <= 0) {
+            $scope.status = "No products available";
+        } else {
+            $scope.status = "";
+            $scope.prods[$scope.idValue].availability -= 1;
+            $scope.productAvail = $scope.prods[$scope.idValue].availability;
+            $scope.totalPrice += $scope.prods[$scope.idValue].price;
+        }
+    };
     
-    $scope.display = function($event) { 
+    $scope.display = function ($event) {
         $scope.idValue = $event.target.id;
         $scope.productName = $scope.prods[$scope.idValue].name;
         $scope.productPrice = $scope.prods[$scope.idValue].price;
         $scope.productAvail = $scope.prods[$scope.idValue].availability;
-    }
+    };
 }]);
