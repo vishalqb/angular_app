@@ -30,7 +30,7 @@
             <div class="navbar-header">
                 <a href="#"><img style="border-radius:40px;" src="assets/logo.png" alt="logo" width=75 height=75/>
                 </a>
-                <a href="#" style="font-size:30px; color:rgba(191, 114, 37, 0.8);">Shopping Cart</a>
+                <a href="#" style="font-size:30px; color:whitesmoke;">Shopping Cart</a>
             </div>
         </div>
     </nav>
@@ -39,13 +39,13 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <strong><h1 style="color: blue;" class="page-header">Deals of the day!!!</h1></strong>
+                <strong><h1 style="color: whitesmoke;" class="page-header">Deals of the day!!!</h1></strong>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-9 col-xs-8"> 
                 <div class="thumb col-lg-3 col-sm-3 col-md-3 col-xs-3" ng-repeat="product in prods">
-                    <img id={{$index}} class="img-responsive imgs" alt="image" width="90" height="90" ng-src="{{product.path}}" ng-click="display($event)">
+                    <img id={{$index}} class="img-responsive imgs img-polaroid" alt="image" width="90" height="90" ng-src="{{product.path}}" ng-click="display($event)">
                 </div>
             </div>
             <div id="disp" class="col-lg-3 col-sm-3 col-md-4 col-xs-4">
