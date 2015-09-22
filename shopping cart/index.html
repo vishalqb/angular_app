@@ -16,7 +16,8 @@
     <!-- Custom CSS -->
     <link href="css/thumbnail-gallery.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/angular.js"></script>
 </head>
 
@@ -38,33 +39,27 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <strong><h1 style="color: red;" class="page-header">Deals of the day!!!</h1></strong>
+                <strong><h1 style="color: blue;" class="page-header">Deals of the day!!!</h1></strong>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12"> 
-                <div class="thumb" class="col-lg-6 col-sm-4 col-md-4 col-xs-6" ng-repeat="product in prods">
+            <div class="col-lg-9 col-md-8 col-sm-9 col-xs-8"> 
+                <div class="thumb col-lg-3 col-sm-3 col-md-3 col-xs-3" ng-repeat="product in prods">
                     <img id={{$index}} class="img-responsive imgs" alt="image" width="90" height="90" ng-src="{{product.path}}" ng-click="display($event)">
                 </div>
             </div>
-            <div id="disp" class="col-lg-3 col-sm-4 col-md-4 col-xs-3">
+            <div id="disp" class="col-lg-3 col-sm-3 col-md-4 col-xs-4">
                 <span>Product name:  </span><label>{{productName}}</label> <br>
                 <span>Product price:  </span><label>{{productPrice}}</label> <br>
                 <span>Product availability:  </span><label>{{productAvail}}</label> <br>
+                <span>Selected:  </span><label>{{productCount}}</label> <br>
                 <span>Total price: </span><label>{{totalPrice}}</label> <br>
                 <span>{{status}}</span> <br>
-            </div>
-        </div>
-        <div class="row">
-            <input type="button" class="btn btn-danger" id="add" value="Add" ng-click="addCart()">
-            <input type="button" class="btn btn-danger" id="cancel" value="Cancel" ng-click="removeCart()">
+                <add-cart></add-cart>
+                <cancel-cart></cancel-cart>
+            </div>  
         </div>
         <br>
-        <div class="row show">
-            <span>Products Selected</span> <br>
-            <span>Product name:  </span><label>{{productName}}</label> <br>
-            <span>Number of products:  </span><label>{{productCount}}</label> <br>
-        </div>
         <br>
         <footer>
             <div class="row">
@@ -75,8 +70,10 @@
             </div>
         </footer>
     </div>  
-<script type="text/javascript" src="js/script.js"></script>    
-    
+    <script type="text/javascript" src="js/script.js"></script>    
+    <script type="text/javascript" src="controller/my-controller.js"></script>    
+    <script type="text/javascript" src="directives/my-directives.js"></script>
+    <script type="text/javascript" src="service/my-service.js"></script>
 </body>
 
 </html>
