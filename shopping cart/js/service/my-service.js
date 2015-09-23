@@ -1,6 +1,6 @@
 app.service("productService", function () {
     "use strict";
-    return [
+    this.productList = [
         {name : "Shirts", price : 100, availability : 10, path : "assets/0.jpg", count : 0},
         {name : "Accessories", price : 50, availability : 7, path : "assets/1.jpg", count : 0},
         {name : "Sports", price : 200, availability : 21, path : "assets/2.jpg", count : 0},
@@ -11,4 +11,5 @@ app.service("productService", function () {
         {name : "Shoes", price : 150, availability : 8, path : "assets/7.jpg", count : 0},
         {name : "Bags", price : 150, availability : 6, path : "assets/8.jpg", count : 0}
     ];
+    this.itemClicked = "";
 });

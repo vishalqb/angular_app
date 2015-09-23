@@ -8,8 +8,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <base href="index.html">
     <title>Shopping Cart</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -19,6 +19,7 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
 </head>
 
 <body>
@@ -28,50 +29,29 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a href="#"><img style="border-radius:40px;" src="assets/logo.png" alt="logo" width=75 height=75/>
+                <a href="#/"><img style="border-radius:40px;" src="assets/logo.png" alt="logo" width=75 height=75/>
                 </a>
-                <a href="#" style="font-size:30px; color:whitesmoke;">Shopping Cart</a>
+                <a href="#/" style="font-size:30px; color:whitesmoke;">Shopping Cart</a>            
             </div>
         </div>
     </nav>
-    <div class="container" ng-controller="cartController">
-
-        <div class="row">
-
-            <div class="col-lg-12">
-                <strong><h1 style="color: whitesmoke;" class="page-header">Deals of the day!!!</h1></strong>
-            </div>
-        </div>
+    <div class="container">
+        <br>
         <div class="row">
             <div class="col-lg-9 col-md-8 col-sm-9 col-xs-8"> 
-                <div class="thumb col-lg-3 col-sm-3 col-md-3 col-xs-3" ng-repeat="product in prods">
-                    <img id={{$index}} class="img-responsive imgs img-polaroid" alt="image" width="90" height="90" ng-src="{{product.path}}" ng-click="display($event)">
+                <input class="form-control" placeholder="Search products" ng-model="searchText" />
+                <br>
+                <div ng-view>
+            
                 </div>
+            
             </div>
-            <div id="disp" class="col-lg-3 col-sm-3 col-md-4 col-xs-4">
-                <span>Product name:  </span><label>{{productName}}</label> <br>
-                <span>Product price:  </span><label>{{productPrice}}</label> <br>
-                <span>Product availability:  </span><label>{{productAvail}}</label> <br>
-                <span>Selected:  </span><label>{{productCount}}</label> <br>
-                <span>Total price: </span><label>{{totalPrice}}</label> <br>
-                <span>{{status}}</span> <br>
-                <add-cart></add-cart>
-                <cancel-cart></cancel-cart>
-            </div>  
         </div>
-        <br>
-        <br>
-        <footer>
-            <div class="row">
-                <div>
-                    <br>
-                    <p style="text-align:center;color:black;" >Contact <a href=# style="color:#840000;">www.shoppingcart.com </a> </p>
-                </div>
-            </div>
-        </footer>
     </div>  
     <script type="text/javascript" src="js/script.js"></script>    
-    <script type="text/javascript" src="js/controller/my-controller.js"></script>    
+    <script type="text/javascript" src="js/controller/app-config.js"></script>
+    <script type="text/javascript" src="js/controller/cart-controller.js"></script>
+    <script type="text/javascript" src="js/controller/details-controller.js"></script>
     <script type="text/javascript" src="js/directives/my-directives.js"></script>
     <script type="text/javascript" src="js/service/my-service.js"></script>
 </body>

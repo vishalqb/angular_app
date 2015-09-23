@@ -26,12 +26,16 @@ footer {
 }
 
 .show {
-    float: right;
+    float: left;
     font-size: 20px;
     color: #840000;
 }
 
 .imgs {
     border-radius: 25%;
+}
+
+span {
+    color: whitesmoke;
 }
 

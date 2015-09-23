@@ -1,0 +1,7 @@
+<div class="row">
+    <div ng-repeat="product in prods | filter:searchText" class="thumb col-lg-3 col-sm-3 col-md-3 col-xs-3" >
+        <img id="{{$index}}" class="img-responsive imgs img-polaroid" alt="image" width="100" height="100" ng-src="{{product.path}}" ng-click="display($event)" >
+        <span>Product name:  </span><span>{{product.name}}</span> <br>
+        <span>Product availability:  </span><span>{{product.availability}}</span> <br>
+    </div>
+</div>
