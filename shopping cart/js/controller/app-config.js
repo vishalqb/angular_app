@@ -1,16 +1,18 @@
 /*global angular*/
-var app = angular.module("cart", ["ngRoute"]);
+var app = angular.module("cart", ["ui.router"]);
 
-app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
+app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
     "use strict";
-    $routeProvider
-        .when("/", {
-            templateUrl : "pages/home.html",
+    $stateProvider
+        .state("home", {
+            url : "/",
+            templateUrl : "templates/home.html",
             controller : "cartController"
         })
-        .when("/details", {
-            templateUrl : "pages/details.html",
-            controller : "detailsController"
+        .state("details", {
+            url : "/details",
+            templateUrl : "templates/details.html",
+            controller  : "detailsController"
         });
-    //$locationProvider.html5Mode(true);
+    $urlRouterProvider.otherwise("/");
 }]);

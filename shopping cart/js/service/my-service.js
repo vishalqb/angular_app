@@ -12,4 +12,5 @@ app.service("productService", function () {
         {name : "Bags", price : 150, availability : 6, path : "assets/8.jpg", count : 0}
     ];
     this.itemClicked = "";
+    this.totalPrice = 0;
 });
