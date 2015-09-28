@@ -21,7 +21,6 @@ app.controller("detailsController", ["$scope", "productService", function ($scop
             $scope.productAvail = $scope.prods[$scope.idValue].availability;
             productService.totalPrice += $scope.prods[$scope.idValue].price;
             $scope.total = productService.totalPrice;
-            console.log(productService.totalPrice);
             $scope.prods[$scope.idValue].count += 1;
             $scope.productName = $scope.prods[$scope.idValue].name;
             $scope.productCount = $scope.prods[$scope.idValue].count;
