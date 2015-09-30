@@ -1,0 +1,41 @@
+/*
+#header {
+    position: fixed;
+}
+*/
+#heading {
+    font-size: 32px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+}
+
+.input {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.login {
+    margin-left: 300px;
+    width: 400px;
+    height: 400px;
+}
+
+#errorText {
+    color: red;
+    font-size: 16px;
+}
+
+.thumb {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#imagename{
+    font-size: 18px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    
+    <head> 
+        
+        <title>Job Search</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="assets/vendor/angular.js"></script>
+        <script type="text/javascript" src="assets/vendor/jquery.js"></script>
+        <script type="text/javascript" src="assets/vendor/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/vendor/angular-ui-router.js"></script>
+        <script type="text/javascript" src="assets/vendor/angular-ui.js"></script>
+        
+    </head>
+    
+    <body>
+        <header id="header">
+            <a href="#">
+                    <img id="logo" src="assets/images/logo.jpg">
+            </a>
+            <a id="heading" href="#">Job Search</a>
+        </header>
+        <div class="container"> 
+            <div class="row">
+                <div ui-view>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/controllers/app.js"></script>
+        <script type="text/javascript" src="js/controllers/loginController.js"></script>
+        <script type="text/javascript" src="js/controllers/homeController.js"></script>
+        <script type="text/javascript" src="js/controllers/detailsController.js"></script>
+        <script type="text/javascript" src="js/services/getData.js"></script>
+    </body>
+    
+</html>

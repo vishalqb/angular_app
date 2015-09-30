@@ -1,0 +1,15 @@
+<div class="row">
+    <div class="thumb" ng-repeat="image in images">
+        <table>
+            <tr>
+                <span id="imagename">
+                    <strong>{{image.name}}</strong>
+                    </span>
+                <br>
+                <td>
+                    <a href="#/details"><img name="{{image.name}}" src="{{image.path}}" width="200" height="200" ng-click="clicked($event)"></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
