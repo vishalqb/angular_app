@@ -20,7 +20,6 @@ body {
 }
 
 .login {
-    margin-left: 300px;
     width: 400px;
     height: 400px;
 }
@@ -34,8 +33,8 @@ body {
     float: left;
     margin-top: 30px;
     margin-bottom: 50px;
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 #imagename{
@@ -56,6 +55,8 @@ body {
 }
 
 .homeImages{
+    width: 150px;
+    height: 150px;
     border-radius: 15px;
 }
 

@@ -1,4 +1,4 @@
-app.service("getData", ["$http", function ($http) {
+app.factory("getData", ["$http", function ($http) {
     "use strict";
     var service = {};
     service.data = [];
