@@ -1,0 +1,43 @@
+<div class="row">
+    <div>
+        <ul class="list-inline">
+            <li ng-repeat="job in jobDetails | filter:type">
+                <button id="{{job.jobName}}" class="jobtype btn btn-primary" ng-click="$emit('show',job.details)">
+                    {{job.jobName}}
+                </button>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="details" class="row" ng-show="visible">
+    <table class="table-condensed details">
+        <tr>
+            <td>Employer</td>
+            <td>{{employer}}</td>
+        </tr>
+         <tr>
+            <td>Number of Vacancies</td>
+            <td>{{vacancy}}</td>
+        </tr>
+         <tr>
+            <td>Posted Date</td>
+            <td>{{postedDate}}</td>
+        </tr>
+         <tr>
+            <td>Last Date of Application</td>
+            <td>{{lastDate}}</td>
+        </tr>
+         <tr>
+            <td>Experience years</td>
+            <td>{{expYrs}}</td>
+        </tr>
+         <tr>
+            <td>Experience level</td>
+            <td>{{expLevel}}</td>
+        </tr>
+        <tr>
+            <td>Qualification</td>
+            <td>{{qualification}}</td>
+        </tr>
+    </table>
+</div>

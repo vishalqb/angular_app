@@ -1,5 +1,7 @@
 <div class="row">
-    <div class="thumb" ng-repeat="image in images">
+    <br>
+    <input type="search" class="form-control" ng-model="search" placeholder="Search Type">
+    <div class="thumb" ng-repeat="image in images | filter:search">
         <table>
             <tr>
                 <span id="imagename">
@@ -7,7 +9,7 @@
                     </span>
                 <br>
                 <td>
-                    <a href="#/details"><img name="{{image.name}}" src="{{image.path}}" width="200" height="200" ng-click="clicked($event)"></a>
+                    <a href="#/details"><img class="homeImages" name="{{image.name}}" src="{{image.path}}" width="150" height="150" ng-click="clicked($event)"></a>
                 </td>
             </tr>
         </table>

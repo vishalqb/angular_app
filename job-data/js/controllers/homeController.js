@@ -1,13 +1,9 @@
 app.controller("homeController", ["$scope", "getData", function ($scope, getData) {
-    $scope.jobDetails = [];
+    "use strict";
     getData.retrieve("http://nodejs-qbjsstudy.rhcloud.com/api/get_job_data");
-    $scope.data = getData.data;
-    $scope.data.then(function (value) {
-        $scope.jobDetails = value;
-    });
+    $scope.jobDetails = getData.data;
     $scope.images = getData.images;
-    $scope.clicked = function(name){
+    $scope.clicked = function (name) {
         getData.selected = name.target.name;
-        console.log(getData.selected);
     };
 }]);

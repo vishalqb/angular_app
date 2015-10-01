@@ -21,15 +21,3 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         });
     $urlRouterProvider.otherwise("/");
 }]);
-
-//app.controller("apicall", ["$scope", "$http", function ($scope, $http) {
-//    var getData = $http.get("http://nodejs-qbjsstudy.rhcloud.com/api/get_job_data");
-//    getData.success(function (response) {
-//        $scope.data = angular.fromJson(response);
-//        console.log(response);
-//    });
-//    getData.error(function (response) {
-//        $scope.data = "failure";
-//        console.log(response);
-//    });
-//}]);

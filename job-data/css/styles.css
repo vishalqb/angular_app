@@ -1,15 +1,17 @@
-/*
-#header {
-    position: fixed;
+body {
+    background-image: url(../assets/images/bg1.jpg);
+    background-size: auto;
 }
-*/
 #heading {
     font-size: 32px;
+    color: red;
+    margin-left: 20px;
 }
 
 #logo {
     width: 100px;
     height: 100px;
+    border-radius: 25px;
 }
 
 .input {
@@ -31,11 +33,33 @@
 .thumb {
     float: left;
     margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 #imagename{
-    font-size: 18px;
+    font-size: 20px;
+    color: maroon;
+}
+
+.jobtype {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.details {
+    font-size: 20px;
+    color: blue;
+}
+
+.homeImages{
+    border-radius: 15px;
+}
+
+#details {
+    margin-top: 30px;
+    margin-left: 200px;
 }

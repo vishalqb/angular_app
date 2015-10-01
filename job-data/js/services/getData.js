@@ -1,16 +1,16 @@
-app.service("getData", ["$http", "$q", function ($http, $q) {
-    var value = $q.defer();
-    this.retrieve = function (url) {
+app.service("getData", ["$http", function ($http) {
+    "use strict";
+    var service = {};
+    service.data = [];
+    service.retrieve = function (url) {
         $http.get(url)
             .success(function (response) {
-                value.resolve(response.results);
+                service.data = response.results;
             })
             .error(function (response) {
-                value.reject(response);
             });
-        this.data = value.promise;
     };
-    this.images = [ 
+    service.images = [
         {name : "Developer", path : "assets/images/developers.jpg"},
         {name : "SQL", path : "assets/images/sql.jpg"},
         {name : "Mobile", path : "assets/images/mobile.jpg"},
@@ -25,7 +25,8 @@ app.service("getData", ["$http", "$q", function ($http, $q) {
         {name : "Java", path : "assets/images/java.jpg"},
         {name : "MongoDB", path : "assets/images/mongodb.jpg"},
         {name : "JavaScript", path : "assets/images/javascript.jpg"},
-        {name : "MEAN", path : "assets/images/mean.jpg"} 
-                  ];
-    this.selected = "intial";
+        {name : "MEAN", path : "assets/images/mean.jpg"}
+    ];
+    service.selected = "intial";
+    return service;
 }]);
