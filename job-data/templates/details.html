@@ -1,7 +1,7 @@
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6" ng-repeat="job in jobDetails | filter:type">
 <!--    <ul class="list-inline">-->
 <!--        <li ng-repeat="job in jobDetails | filter:type">-->
-            <button id="{{job.jobName}}" class="jobtype input" ng-click="$emit('show',job.details)">
+            <button id="{{job.jobName}}" class="jobtype input" ng-click="show(job.details)">
                 {{job.jobName}}
             </button>
 <!--        </li>-->

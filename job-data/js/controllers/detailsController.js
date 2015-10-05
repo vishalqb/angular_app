@@ -3,7 +3,7 @@ app.controller("detailsController", ["$scope", "getData", function ($scope, getD
     $scope.visible = false;
     $scope.jobDetails = getData.data;
     $scope.type = getData.selected;
-    $scope.$on("show", function (event, receivedData) {
+    $scope.show = function (receivedData) {
         $scope.visible = true;
         $scope.employer = receivedData.employer;
         $scope.lastDate = receivedData.LastDateOfApplication;
@@ -12,5 +12,5 @@ app.controller("detailsController", ["$scope", "getData", function ($scope, getD
         $scope.expYrs = receivedData.experianceYears;
         $scope.vacancy = receivedData.numberOfVacencies;
         $scope.qualification = receivedData.qualification;
-    });
+    };
 }]);
