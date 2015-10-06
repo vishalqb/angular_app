@@ -25,6 +25,7 @@ body {
     float: none;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 #errorText {
@@ -33,11 +34,9 @@ body {
 }
 
 .thumb {
-    float: left;
     margin-top: 30px;
     margin-bottom: 50px;
-    margin-left: 15px;
-    margin-right: 15px;
+    text-align: center;
 }
 
 #imagename{
@@ -49,11 +48,10 @@ body {
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
-    float: left;
     border-radius: 20px;
 }
 
-.details {
+#tableDetails {
     font-size: 20px;
     color: whitesmoke;
 }
@@ -62,11 +60,64 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#details {
-/*
-    margin-top: 30px;
-    margin-left: 200px;
-*/
+.search {
+    margin-right: auto;
+    margin-left: auto;
+    width: 300px;
+    
+}
+
+.details {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+@media screen and (max-width: 640px) {
+    #imagename {
+        font-size: 16px;
+        color: whitesmoke;
+        text-align: center;
+    }
+    .homeImages {
+        width: 75px;
+        height: 75px;
+    }
+    .jobtype {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto; 
+    }
+    #tableDetails {
+        font-size: 16px;
+        color: whitesmoke;  
+    }
+    .thumb {
+        margin-top: 15px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #imagename {
+        font-size: 12px;
+    }
+    .homeImages {
+        width: 50px;
+        height: 50px;
+    }
+    .jobtype {
+        font-size: 12px;
+    }
+    #tableDetails {
+        font-size: 12px;
+    }
+    .thumb {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
 }
